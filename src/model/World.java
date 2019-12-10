@@ -65,7 +65,7 @@ public class World implements IWorld {
         //camera
 
         if(p.getPosition().getLengthBetweenPoints(c.getPosition())>2){
-            c.setAcceleration(new Vector2(c.getPosition(),p.getPosition()));
+            c.setAcceleration(new Vector2(c.getPosition(),p.getPosition()).mul(0.09));
         } else if(p.getPosition().getLengthBetweenPoints(c.getPosition())<1.5) {
             c.setM(p.getM()*10000);
         }
